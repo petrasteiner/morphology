@@ -1,0 +1,31 @@
+## CELEXextract.pl
+
+##
+## examples for call:
+
+## This text:
+## perl CELEXextract.pl -h
+
+## just compound splits
+## perl CELEXextract.pl > controloutput
+
+## compound splits and deep level analysis for compounds with level 3, pos, parenthesis style, linguistic information
+## perl CELEXextract.pl -celex -it -pos -n 3 -par > controloutput
+
+## compound splits and deep level analysis for compounds with level 5 and conversions with level 2, pos, parenthesis style, linguistic information
+## perl CELEXextract.pl -zcelex -it -pos -zn 2 -n 5 -par > controloutput
+
+## compound splits and deep level analysis for compounds with level 5 and conversions with level 2, with levenshtein threshold, pos, parenthesis style, linguistic information
+## perl CELEXextract.pl -zcelex -it -pos -zn 2 -n 5 -par -levperc 0.75 > controloutput
+
+
+## options:
+##  'n=i' : number of levels of analysis
+## 'zn=i' : number of levels of analysis for conversions
+## 'levperc=f' : threshold for levenshtein distance / min length of stem and orthform, range [0:1], try 0.75 
+##  'celex' : build trees, if not set only the upper compound splits will be produced
+##  'zcelex' : treat conversions (Zusammenrueckungen)
+##  'it' : provide infos inside the tree
+##  'pos' : provide parts of speech information
+##  'par' : use parenthesis style instead of | for splits
+##  -h : invoke helpfile
