@@ -1,0 +1,53 @@
+## GNcompoundswithCELEX.pl
+
+## Requirements
+
+## files GMOLoutputneworthography
+##      GSOLoutputneworthography (for CELEX analyses)
+## inputdirectory with GermaNet xml files
+## or inputfile (GN xml file)
+
+## examples for call:
+
+## This text:
+## perl GNcompoundswithCELEX.pl -h
+
+## just compound splits of $Path/filesGN11\/nomen.Artefakt.xml if available
+## perl GNcompoundswithCELEX.pl > controloutput
+
+## compound splits and analyses of depth 1 of $Path/filesGN11\/nomen.Artefakt.xml if available
+## perl GNcompoundswithCELEX.pl -n 1 > out2001
+
+## compound splits and analyses of depth 1, also for conversions, of inputfile
+## perl GNcompoundswithCELEX.pl  -i inputfile -n 1 -zn 1
+
+## compound splits and analyses of depth 1, also for conversions, of inputdir
+## perl GNcompoundswithCELEX.pl  -d inputdir -n 1 -zn 1
+
+## compound splits and deep level analysis for compounds of inputdir filesGN11 with level 3, pos, parenthesis style, linguistic information
+## perl GNcompoundswithCELEX.pl -d filesGN11 -celex -it -pos -n 3 -par > controloutput
+
+## compound splits and deep level analysis for compounds with level 5 and conversions with level 2, pos, parenthesis style, linguistic information
+## perl GNcompoundswithCELEX.pl -zcelex -it -pos -zn 2 -n 5 -par > controloutput
+
+## compound splits and deep level analysis for compounds in the dir filesGN11 with level 5 and conversions with level 2, with levenshtein threshold, pos, parenthesis style, linguistic information, map GN tags to CELEX tags
+## perl GNcompoundswithCELEX.pl -d filesGN11 -zcelex -it -pos -zn 2 -n 5 -par -levperc 0.75 -ctags > controloutput
+
+
+## options:
+   -i sInputFilename
+   -d sInputDir
+   -rmfw  (flag removeforeignwords)
+   -rmpn (flag removepropernames)
+   -addfl (flag faddfillerletters)
+   -n niterations, # depth of tree for compounds and derivations
+   -zn ziterations, # depth of tree for Zusammenrueckungen (in CELEX)
+   -levperc  nlevenshtein, # range 0:1
+   -celex flagcelex
+   -zcelex flagzusammenrueckungen
+   -ctags flagcelextags
+   -it flaginfosintree
+   -pos flagpos
+   -par flagparstyle
+   -h help
+    
