@@ -5,7 +5,7 @@ License: CC BY-NC-SA (only for research and teaching, only for peaceful purposes
 modification possible, publish under same condition)
 
 These are simple Perl scripts for modernizing the German part of CELEX 
-and generating morphological treebanks from the modernized version of CELEX
+and generating morphological tree databases from the modernized version of CELEX
 and GermaNet.
 
 You need to have the following files (and their licenses). 
@@ -22,5 +22,3 @@ You need to have the following files (and their licenses).
  3. Install all missing packages                           
  4. Start the program      
                                                              
-                             
-     
