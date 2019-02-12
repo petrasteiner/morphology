@@ -60,8 +60,6 @@ use MLDBM qw (DB_File Storable);
 # in case that Storable is not installed uncomment the following line
 #use MLDBM qw (DB_File);
 
-use Sort::Key::Top qw(nkeytop rnkeytop rnkeytopsort);
-
 use open ':utf8';
 use utf8;
 
@@ -78,13 +76,6 @@ $Data::Dumper::Useperl = 1;
 use FreezeThaw;
 use DBM_Filter;
 
-#use Math::Combinatorics;
-
-#use List::Util qw(first sum reduce max);
-#use List::MoreUtils qw(uniq indexes any);
-#use List::Gen;
-#use Sort::Naturally;
-#use Sort::Versions;
 use Sort::Key::Natural qw(natkeysort);
 
 BEGIN 
