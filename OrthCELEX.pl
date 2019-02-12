@@ -47,7 +47,6 @@ This is a simple Perl script for the conversion of CELEX GML.CD to a modernized 
 
 #!/usr/bin/perl -w 
 
-
 use strict;
 
 use warnings;
@@ -59,8 +58,6 @@ use MLDBM qw (DB_File Storable);
 
 # in case that Storable is not installed uncomment the following line
 #use MLDBM qw (DB_File);
-
-use Sort::Key::Top qw(nkeytop rnkeytop rnkeytopsort);
 
 use open ':utf8';
 use utf8;
@@ -78,13 +75,6 @@ $Data::Dumper::Useperl = 1;
 use FreezeThaw;
 use DBM_Filter;
 
-#use Math::Combinatorics;
-
-#use List::Util qw(first sum reduce max);
-#use List::MoreUtils qw(uniq indexes any);
-#use List::Gen;
-#use Sort::Naturally;
-#use Sort::Versions;
 use Sort::Key::Natural qw(natkeysort);
 
 BEGIN 
@@ -184,9 +174,6 @@ print "Output file: $sFilename.\n\n";
 $sFilename = "GMOLoutputreformedhash";
 
 $nReturnValueFilename2 = change_to_new_orthography($nReturnValueFilename3, $sFilename);
-
-
-
 
 $sFilename = "GMOLoutputneworthography";
 $nReturnValueFilename3 = output_of_tied_hash($nReturnValueFilename2, $sFilename);
