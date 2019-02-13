@@ -125,7 +125,7 @@ use Data::Dumper qw(Dumper);
 
 use List::Util qw(first none all min max);
 use List::MoreUtils qw(first_index indexes uniq pairwise);
-use String::Diff;
+# use String::Diff;
     
 $Data::Dumper::Useqq = 1;
 
