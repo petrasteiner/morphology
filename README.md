@@ -1,7 +1,7 @@
 # morphology
 Morphological tools and treebank generation
 
-License: CC BY-NC-SA (only for research and teaching, only for peaceful purposes, name author and source, 
+License: CC BY-NC-SA (*only for research and teaching, only for peaceful purposes*, name author and source, 
 modification possible, publish under same condition)
 
 These are simple Perl scripts for modernizing the German part of CELEX 
