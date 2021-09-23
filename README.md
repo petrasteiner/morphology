@@ -15,7 +15,7 @@ You need to have the following files (and their licenses).
                                                              
  Quick start:                                              
                                                              
- 1. Install Perl 5.14 or later version for Linux                                
+ 1. Install Perl 5.14 or later version for Linux or Cygwin                           
  2. Put the Input files into the same folder as the respective program
  2a. for GNcompoundswithCELEX.pl create a folder with the GermaNet files according to the instruction
  2b. OrthCELEX.pl, MorphphonCELEX.pl, and OrthCELEXforsgl.pl run without any options
