@@ -978,7 +978,7 @@ sub change_to_new_orthography
 	$stransformed =~ s/(.*?\\)immobilien(\+.*?\\)(.+?)(\\.*?)\(immobilien\)\[\](.*?)/$1Immobilien$2N$3$4\(Immobilien\)\[N\]$5/g;
 
 	# Kenntnisnahme same as Maßnahme, Rücksichtnahme
-	$stransformed =~ s/(.*?Kenntnisnahme\\.+?\\)C(\\.*?\\)Kenntnis\+nahme\\N(\\.+?)\(nahme\)\[\](.*?)/$1Z$2kenntnisnehm\\V$3\(nehm\)\[V\]\)\[V\]$4/;
+	$stransformed =~ s/(.*?Kenntnisnahme\\.+?\\)C(\\.*?\\)Kenntnis\+nahme\\N(\\.+?)\(nahme\)\[\](.*?)/$1Z$2kenntnisnehm\\V$3\(nehm\)\[V\]$4/;
 
 
 	$stransformed =~ s/(.*?\\klass)(\+.*?\\)(.+?)(\\.*?)\(klass\)\[\](.*?)/$1$2R$3$4\(klass\)\[R\]$5/g;
