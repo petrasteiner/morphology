@@ -1,0 +1,82 @@
+NAME
+    <GNcompoundswithCELEXRDF> Takes xml-files of GermaNet and extracts trees
+    structures of the compounds. Many options can be made, e.g. restricting
+    the trees to a certain depth of analysis. Optionally, these analyses can
+    be combined with the analyses of the refurbished CELEX database for
+    German. Also here, many options can be made, e.g. skip conversions or
+    restrict the trees to a certain depth of analysis.
+
+VERSION
+    Draft Version
+
+SYNOPSIS
+Synopsis in GNcompoundswithCELEXRDF.help
+REQUIREMENTS
+    files GMOLoutputneworthography GSOLoutputneworthographyinputdirectory
+    with GermaNet xml files or inputfile (GN xml file) =head1 USE
+
+    Description in GNcompoundswithCELEXRDF.help
+
+ARGUMENTS
+    see GNcompoundswithCELEXRDF.help
+
+OPTIONS
+    see GNcompoundswithCELEXRDF.help
+
+SUBROUTINES
+  output_of_tied_hashs
+takes $inputhashfile and $outputtextfile
+sorts keys and writes keys and value to the output
+  addinfinitivestems
+takes $ics: string with immediate constituents and @positions of verbs
+adds infinitive stems at the positions
+returns $newics
+  mycartesian
+takes an array
+returns the Cartesian product of the subsets of the array
+  output_of_tied_hash_witharraysinlines
+takes $inputhashfile and $outputtextfile
+sorts keys and writes keys and value to the output
+the values are arrays, these are sorted and printed
+to the output file
+  insert_fillerletters
+takes $orthform (e.g. Werkstueck, Staedtebau) and $set (reference to array, e.g. [Werk Stueck] [Stadt Bau])
+if there is a divergence between the $orthform and joined set
+returns $refnew_setstr, a reference to a new array like $set, but with filler letters, e.g. [Stadt e Bau]
+  buildanalyses
+takes  $inputhashfile, 
+some previously created hashfiles,
+parameters for the number of analysis levels and levenshtein methods, 
+flags for infosintree, pos, parenthesis style, 
+flags additional celex analyses and previously created celex hash files
+and writes the generated result with morphological analyses to $outputhashfile,
+if no analyses can be found of deep_buildanalyses and flagcelex is 1, deep_addcelexsplits is called.
+calls deep_buildanalyses, deep_addcelexsplits, mycartesian
+  deep_buildanalyses
+works recursively, called by buildanalyses, 
+takes an array with a word constituent from above, 
+parameters for the number of analysis levels and levenshtein methods, 
+the current values of these parameters
+flags for infosintree and pos
+calls deep_addcelexsplits, mycartesian
+  deep_addcelexsplits
+works recursively, called by buildanalyses and deep_buildanalyses 
+takes an array with a word constituent from above, 
+parameters for the number of analysis levels and levenshtein methods, 
+the current values of these parameters
+flags for infosintree and pos
+calls deep_addcelexsplits, mycartesian
+DIAGNOSIS
+    File XY could not be opened - check for path and name
+
+INCOMPATABILITIES
+    Not known
+
+BUGS AND LIMITATIONS
+AUTHOR(S)
+    Petra Steiner
+
+COPYRIGHT
+    Distribution only by Petra Steiner, CC-BY-SA4.0, only for peaceful
+    purposes
+
